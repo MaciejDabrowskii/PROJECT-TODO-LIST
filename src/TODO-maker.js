@@ -34,8 +34,6 @@ const todoTask = (name, date, time, priority, notes, project) => {
         todoPoject = string
     };    
 
-
-    
     return {
         getTodoName,
         getTodoDate,
@@ -52,4 +50,3 @@ const todoTask = (name, date, time, priority, notes, project) => {
     }
 };
 export default todoTask;
-
