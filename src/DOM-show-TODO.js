@@ -1,5 +1,5 @@
-const showTodo = (todo) => {
-    const body = document.body
+const domShowTodo = (todo) => {
+    // const ZAMIENIC TO!!!!!! = document.body
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todoDiv');
 
@@ -24,5 +24,6 @@ const showTodo = (todo) => {
     todoNotesDiv.textContent = todo.getTodoNotes();
 
     todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv);
-    body.appendChild(todoDiv);
+    // I TO!!!!!!.appendChild(todoDiv);
 };
+export default domShowTodo
