@@ -5,6 +5,7 @@ const todoTask = (name, date, time, priority, notes, project) => {
     let todoPriority = priority;
     let todoNotes = notes;
     let todoPoject = project;
+    let todoStatus = false;
     
     // Get functions returning variable contents
     const getTodoName = () => todoName;
@@ -12,7 +13,7 @@ const todoTask = (name, date, time, priority, notes, project) => {
     const gettodoTime = () => todoTime;
     const getTodoPriority = () => todoPriority;
     const getTodoNotes = () => todoNotes;
-    const getTodoPoject = () => todoPoject;
+    const getTodoStatus = () => todoStatus;
     
     // Set functions to edit variable contents
     const setTodoName = (string) => {
@@ -32,7 +33,10 @@ const todoTask = (name, date, time, priority, notes, project) => {
     };
     const setTodoPoject = (string) => {
         todoPoject = string
-    };    
+    };
+    const setTodoStatus = () => {
+        return todoStatus ? false : true;
+    }  
 
     return {
         getTodoName,
@@ -40,13 +44,14 @@ const todoTask = (name, date, time, priority, notes, project) => {
         gettodoTime,
         getTodoPriority,
         getTodoNotes,
-        getTodoPoject,
+        getTodoStatus,
         setTodoName,
         setTodoDate,
         setTodoTime,
         setTodoPriority,
         setTodoNotes,
         setTodoPoject,
+        setTodoStatus,
     }
 };
 export default todoTask;
