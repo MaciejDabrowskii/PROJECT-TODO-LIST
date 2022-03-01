@@ -41,3 +41,4 @@ const projectMenager = (() => {
         moveTODOFromHomeToProject,
     }
 })();
+export default projectMenager

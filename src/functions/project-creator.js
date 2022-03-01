@@ -1,4 +1,4 @@
-const projectMaker = (name) => {
+const projectCreator = (name) => {
     let projectName = name;
     let todosArray = [];
     
@@ -25,4 +25,4 @@ const projectMaker = (name) => {
         flatTodosArray,
     }
 }
-export default projectMaker;
+export default projectCreator;

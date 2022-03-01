@@ -1,6 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
 .head {
     width: 100%;
-    height: 10%;
+    height: 100%;
     background-color: rgb(97, 161, 216);
 }
 .logo {
@@ -10,7 +15,6 @@
 }
 .body {
     width: 100%;
-    height: 85vh;
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
@@ -21,25 +25,19 @@
     display: grid;
     grid-template-rows: 1fr 1fr 10fr 1fr;
 }
-.todosDiv {
-    grid-column: 2 / 3;
-    height: 100%;
-    background-color: rgb(221, 163, 86);
+.projectsDivHeader {
+    grid-row: 1 / 2;
 }
 .homeProjectDiv {
-    grid-row: 1 / 2;
-    background-color: rgb(176, 223, 223);
-}
-.allTodosButton {
     grid-row: 2 / 3;
-    background-color: rgb(176, 223, 204);
+    background-color: rgb(176, 223, 223);
 }
 .projectsContainer {
     grid-row: 3 / 4;
     background-color: rgb(209, 223, 176);
 }
-.addProjectDiv {
-    grid-row:4 / 5;
+.addProjectContainer {
+    grid-row: 4 / 5;
     background-color: rgb(223, 176, 213);
 }
 
@@ -53,7 +51,19 @@
 .todoDivHeader {
     grid-row: 1 / 2;
     background-color: rgb(176, 223, 223);
-    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    font-size: 3vh;
+}
+.allTodosButton {
+    background-color: rgb(218, 149, 149);
+    align-self: center;
+    justify-self: end;
+    padding: 0.3%;
+    margin-right: 2%;
+    
 }
 .todosContainer {
     grid-row: 2 / 3;
@@ -61,10 +71,18 @@
 }
 .todoOptionsContainer {
     grid-row: 3 / 4;
-    background-color: rgb(176, 223, 182);
+    background-color: rgb(18, 116, 31);
 }
 
 .footer {
-    display: flex
+    grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+    height: 4vh;
+    justify-content: center;
+    gap: 1%;
+}
+.gitIcon {
+    height: 3vh;
 }
 

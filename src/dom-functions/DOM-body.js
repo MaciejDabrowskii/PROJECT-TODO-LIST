@@ -8,31 +8,44 @@ const createBody = () => {
     homeProjectDiv.classList.add('homeProjectDiv');
     homeProjectDiv.innerText = "HOME";
 
-    const allTodosButton = document.createElement('div');
-    allTodosButton.classList.add('allTodosButton');
-    allTodosButton.innerText = "All Todos";
-
     const projectsContainer = document.createElement('div');
     projectsContainer.classList.add('projectsContainer');
 
-    const addProjectButton = document.createElement('div');
-    addProjectButton.classList.add('addProjectDiv');
-    addProjectButton.innerText = "+ ADD"
+    const addProjectContainer = document.createElement('div');
+    addProjectContainer.classList.add('addProjectContainer');
 
-    projectsDiv.append(homeProjectDiv, allTodosButton, projectsContainer, addProjectButton)
+    const addProjectButton = document.createElement('button');
+    addProjectButton.classList.add('addProjectButton');
+    addProjectButton.innerText = "+ ADD";
+
+    const projectsDivHeader = document.createElement('h2');
+    projectsDivHeader.classList.add('projectsDivHeader');
+    projectsDivHeader.innerText = "PROJECTS:";
+
+    addProjectContainer.append(addProjectButton);
+
+    projectsDiv.append(projectsDivHeader, homeProjectDiv, projectsContainer, addProjectContainer);
 
     const todosDiv = document.createElement('div');
     todosDiv.classList.add('todosDiv');
 
     const todoDivHeader = document.createElement('div');
     todoDivHeader.classList.add('todoDivHeader');
-    todoDivHeader.innerText = "Todos:"
+    todoDivHeader.innerText = "Todos:";
+
+    const allTodosButton = document.createElement('div');
+    allTodosButton.classList.add('allTodosButton');
+    allTodosButton.innerText = "All Todos";
+
+
 
     const todosContainer = document.createElement('div');
     todosContainer.classList.add('todosContainer');
 
     const todoOptionsContainer = document.createElement('div');
     todoOptionsContainer.classList.add('todoOptionsContainer');
+
+    todoDivHeader.append(allTodosButton);
 
     todosDiv.append(todoDivHeader, todosContainer, todoOptionsContainer);
 
