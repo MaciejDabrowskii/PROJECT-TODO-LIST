@@ -46,7 +46,7 @@ const swaptodoOptionsContainerContents = () => {
     
     const todoNotesInputLabel = document.createElement('Label');
     todoNotesInputLabel.setAttribute("for","todoNotesInputLabel");
-    todoNotesInputLabel.innerHTML = "Date:";
+    todoNotesInputLabel.innerHTML = "Notes:";
 
     const todoNotesInput = document.createElement('input');
     todoNotesInput.type = "textarea";
