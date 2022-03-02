@@ -6,7 +6,8 @@ let showProjects = () => {
         let projectDiv = document.createElement('div');
         projectDiv.classList.add('projectDiv');
         
-        const projectName = document.createElement('div')
+        const projectName = document.createElement('div');
+        projectName.classList.add('projectName');
         projectName.innerText = `${project.getName()}`;
  
         const dropdown = document.createElement('div');
