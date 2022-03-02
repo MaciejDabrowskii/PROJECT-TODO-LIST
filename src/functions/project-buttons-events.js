@@ -10,13 +10,21 @@ const projectButtonsEvents = () => {
             });
         });
         window.onclick = function(event) {
-  if (!event.target.matches('.editProjectButton')) {
-    const dropdown = document.querySelector(".dropdownContent");
-    if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show');
-    };
-  }
-}
+            if (
+                (!event.target.matches('.editProjectButton')) &&
+                (!event.target.matches('.dropdownContent')) &&
+                (!event.target.matches('#editProjectName')) &&
+                (!event.target.matches('label')) &&
+                (!event.target.matches('.confirmNewNameButton'))
+               ) {
+                input.innerHTML = "";
+                const dropdown = document.querySelector(".dropdownContent");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                };
+            }
+        }
+        
     };
     const deleteProjectButton = (button, index) => {
         button.addEventListener('click', () =>{
