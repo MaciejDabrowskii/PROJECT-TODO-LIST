@@ -43,6 +43,14 @@ const swaptodoOptionsContainerContents = () => {
         priority.text = priorityArray[i];
         todoPrioritySelect.appendChild(priority);
     };
+    
+    const todoNotesInputLabel = document.createElement('Label');
+    todoNotesInputLabel.setAttribute("for","todoNotesInputLabel");
+    todoNotesInputLabel.innerHTML = "Date:";
+
+    const todoNotesInput = document.createElement('input');
+    todoNotesInput.type = "textarea";
+    todoNotesInput.id = "todoNotesInput";
 
     const todoCreateConfirmBtn = document.createElement('button');
     todoCreateConfirmBtn.classList.add("todoCreateConfirmBtn");
@@ -52,7 +60,20 @@ const swaptodoOptionsContainerContents = () => {
     todoCreateCancelBtn.classList.add("projectNameCancelBtn");
     todoCreateCancelBtn.innerText= "X";
 
-    todoOptionsContainer.append(todoNameInputLabel, todoNameInputText ,todoDatePickerLabel, todoDatePickerInput, todoTimePickerLabel, todoTimePickerInput, todoPrioritySelectLabel, todoPrioritySelect, todoCreateConfirmBtn, todoCreateCancelBtn);
+    todoOptionsContainer.append(
+        todoNameInputLabel, 
+        todoNameInputText ,
+        todoDatePickerLabel,
+        todoDatePickerInput,
+        todoTimePickerLabel,
+        todoTimePickerInput,
+        todoPrioritySelectLabel,
+        todoPrioritySelect,
+        todoNotesInputLabel,
+        todoNotesInput,
+        todoCreateConfirmBtn,
+        todoCreateCancelBtn
+    );
 
     // addEventFunctiontsToForm()
 };

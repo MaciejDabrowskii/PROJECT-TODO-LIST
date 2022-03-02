@@ -1,5 +1,6 @@
 const domShowTodo = (todo) => {
-    // const ZAMIENIC TO!!!!!! = document.body
+    const todosContainer = document.querySelector('.todosContainer');
+
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todoDiv');
 
@@ -24,6 +25,6 @@ const domShowTodo = (todo) => {
     todoNotesDiv.textContent = todo.getTodoNotes();
 
     todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv);
-    // I TO!!!!!!.appendChild(todoDiv);
+    todosContainer.appendChild(todoDiv);
 };
 export default domShowTodo
