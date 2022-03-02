@@ -5,7 +5,7 @@ const createBody = () => {
     projectsDiv.classList.add('projectsDiv');
 
     const homeProjectDiv = document.createElement('div');
-    homeProjectDiv.classList.add('homeProjectDiv');
+    homeProjectDiv.classList.add('homeProjectDiv', 'target');
     homeProjectDiv.innerText = "HOME";
 
     const projectsContainer = document.createElement('div');

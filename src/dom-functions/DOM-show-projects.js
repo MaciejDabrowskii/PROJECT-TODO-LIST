@@ -1,5 +1,6 @@
 import projectMenager from "../functions/project-menager.js";
 import projectButtonsEvents from "../functions/project-buttons-events.js";
+import addProjectDivEvent from "../functions/add-project-divs-event"
 let showProjects = () => {
     document.querySelector('.projectsContainer').innerHTML= "";
     projectMenager.getProjectsArray().forEach((project, index) => {
@@ -50,6 +51,7 @@ let showProjects = () => {
 
         projectDiv.append(projectName, projectButtonsContainer);
         document.querySelector('.projectsContainer').append(projectDiv);
+        addProjectDivEvent()
     })
 }; 
 

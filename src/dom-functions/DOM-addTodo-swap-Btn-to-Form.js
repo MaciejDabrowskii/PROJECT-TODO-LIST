@@ -1,4 +1,4 @@
-// import addEventFunctiontsToForm from '../functions/add-project-form-buttons-events.js';
+import newTodoButtonsEvents from '../functions/add-todo-form-events.js';
 
 const swaptodoOptionsContainerContents = () => {
     const todoOptionsContainer = document.querySelector('.todoOptionsContainer');
@@ -57,7 +57,7 @@ const swaptodoOptionsContainerContents = () => {
     todoCreateConfirmBtn.innerText= "V";
 
     const todoCreateCancelBtn = document.createElement('button');
-    todoCreateCancelBtn.classList.add("projectNameCancelBtn");
+    todoCreateCancelBtn.classList.add("todoCreateCancelBtn");
     todoCreateCancelBtn.innerText= "X";
 
     todoOptionsContainer.append(
@@ -75,6 +75,6 @@ const swaptodoOptionsContainerContents = () => {
         todoCreateCancelBtn
     );
 
-    // addEventFunctiontsToForm()
+    newTodoButtonsEvents()
 };
 export default swaptodoOptionsContainerContents

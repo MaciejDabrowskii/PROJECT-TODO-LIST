@@ -14,7 +14,7 @@ const domShowTodo = (todo) => {
 
     const todoTimeDiv = document.createElement('div');
     todoTimeDiv.classList.add('todoTimeDiv');
-    todoTimeDiv.textContent = todo.getTodoTime();
+    todoTimeDiv.textContent = todo.gettodoTime();
 
     const todoPriorityDiv = document.createElement('div');
     todoPriorityDiv.classList.add('todoTimeDiv');
