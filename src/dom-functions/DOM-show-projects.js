@@ -5,7 +5,9 @@ let showProjects = () => {
     projectMenager.getProjectsArray().forEach((project, index) => {
         let projectDiv = document.createElement('div');
         projectDiv.classList.add('projectDiv');
-        projectDiv.innerText = `${project.getName()}`;
+        
+        const projectName = document.createElement('div')
+        projectName.innerText = `${project.getName()}`;
  
         const dropdown = document.createElement('div');
         dropdown.classList.add('dropdown');
@@ -33,26 +35,19 @@ let showProjects = () => {
 
         dropdownContent.append(editProjectNameLabel, editProjectNameInput, confirmNewNameButton);
         dropdown.append(editProjectButton, dropdownContent);
-
-        
-        // const editProjectButton = (button, dropdown, confirm, input, project) => {
-        //     button.addEventListener('click', () =>{
-        //         dropdown.classList.toggle("show");
-        //         confirm.addEventListener('click', () =>{
-        //             project.editProjectName(input.value)
-        //         })
-        //         showProjects();
-        //     })
-        // };
-
         
         const deleteProjectButton = document.createElement('button');
         deleteProjectButton.classList.add('deleteProjectButton');
         deleteProjectButton.textContent = 'X';
         projectButtonsEvents().deleteProjectButton(deleteProjectButton, index);
 
+        const projectButtonsContainer = document.createElement('div');
+        projectButtonsContainer.classList.add('projectButtonsContainer');
 
-        projectDiv.append(dropdown, deleteProjectButton);
+        projectButtonsContainer.append(dropdown, deleteProjectButton);
+
+
+        projectDiv.append(projectName, projectButtonsContainer);
         document.querySelector('.projectsContainer').append(projectDiv);
     })
 }; 

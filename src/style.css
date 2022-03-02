@@ -36,6 +36,11 @@ body {
     grid-row: 3 / 4;
     background-color: rgb(209, 223, 176);
 }
+.projectDiv {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
 .dropdown {
     position: relative;
     display: inline-block;
