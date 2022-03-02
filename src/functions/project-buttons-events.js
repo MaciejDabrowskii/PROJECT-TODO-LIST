@@ -4,18 +4,19 @@ const projectButtonsEvents = () => {
     const editProjectButton = (button, dropdown, confirm, input, project) => {
         button.addEventListener('click', () =>{
             dropdown.classList.toggle("show");
-            // window.onclick = function(event) {
-            //         !event.target.matches(dropdown) || 
-            //         !event.target.matches(button) || 
-            //         !event.target.matches(confirm) || 
-            //         !event.target.matches(button) 
-            //         ? dropdown.classList.toggle("show");
-            // }
             confirm.addEventListener('click', () =>{
                 project.editProjectName(input.value);
                 showProjects();
             });
-        })
+        });
+        window.onclick = function(event) {
+  if (!event.target.matches('.editProjectButton')) {
+    const dropdown = document.querySelector(".dropdownContent");
+    if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+    };
+  }
+}
     };
     const deleteProjectButton = (button, index) => {
         button.addEventListener('click', () =>{
