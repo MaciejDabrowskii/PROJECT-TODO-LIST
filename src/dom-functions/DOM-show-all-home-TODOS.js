@@ -25,23 +25,20 @@ const addProjectDivEvent = () => {
     
     projects.forEach((project) => {
         project.addEventListener('click', () =>{
+            todosContainer.innerHTML = "";
             projects.forEach((project) => { project.classList.remove('target') });
             homeProject.classList.remove('target');
             project.classList.add('target');
             let projectName = project.firstChild.innerHTML;
             let projectsArray = projectMenager.getProjectsArray();
-            let projectIndex = 0;
-            if (projectMenager.getProjectsArray().length === 0){
-                return
-            }else {
-                for(let i = 0; i < projectsArray.length; i++ ) {
-                    if (projectMenager.getProjectsArray()[i].getName() === projectName) {projectIndex = i; console.log(projectIndex)};
-                }
-                projectMenager.getProjectsArray()[projectIndex].getTodosArray().forEach((todo) => {
-                    domShowTodo(todo);
-                })
-            // showAllProjectTods()
+            let projectIndex;
+            for(let i = 0; i < projectsArray.length; i++ ) {
+                if (projectMenager.getProjectsArray()[i].getName() === projectName) projectIndex = i;
             }
+            projectMenager.getProjectsArray()[projectIndex].getTodosArray().forEach((todo) => {
+                domShowTodo(todo);
+            })
+
         })
     })
 }
