@@ -52,7 +52,7 @@ let showProjects = () => {
             projectDiv.append(projectName, projectButtonsContainer);
 
             document.querySelector('.projectsContainer').append(projectDiv);
-            addProjectDivEvent();
+            addProjectDivEvent(projectDiv, index);
 
         })
 }; 

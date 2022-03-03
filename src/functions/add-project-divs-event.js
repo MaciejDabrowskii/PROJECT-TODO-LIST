@@ -6,43 +6,30 @@ import addTODOButtonEvent from "./add-todo-button-event.js";
 import domShowTodo from "../dom-functions/DOM-show-TODO.js";
 import showAllProjectTods from "../dom-functions/DOM-show-all-project-TODOS"
 
-const addProjectDivEvent = () => {
+const addProjectDivEvent = (project, index) => {
 
     const homeProject = document.querySelector('.homeProjectDiv');
-    let projects = [...document.querySelectorAll('.projectDiv')];
-    const todosContainer = document.querySelector('.todosContainer');
     homeProject.classList.add('target');
+
+    project.addEventListener('click', () =>{
+        let projectsArray = [...document.querySelectorAll('.projectDiv')];
+        projectsArray.forEach((item) => {
+            item.classList.remove('target'); 
+        });
+        homeProject.classList.remove('target');
+        project.classList.add('target');
+        projectsArray
+
+        if (projectMenager.getProjectsArray().length === 0){
+            return
+        }else {
+            
+            projectMenager.getProjectsArray()[index].getTodosArray().forEach((todo) => {
+                document.querySelector('.todosContainer').innerHTML = "";
+                domShowTodo(todo);
+            });
+        };
+    });
     
-    homeProject.addEventListener('click', () => {
-        homeProject.classList.add('target');
-        todosContainer.innerHTML = "";
-        projects.forEach((project) => { project.classList.remove('target') });
-        projectMenager.getHomeTodosArray().forEach((todo) => {
-            domShowTodo(todo);
-        })
-    });       
-    
-    
-    projects.forEach((project) => {
-        project.addEventListener('click', () =>{
-            projects.forEach((project) => { project.classList.remove('target') });
-            homeProject.classList.remove('target');
-            project.classList.add('target');
-            let projectName = project.firstChild.innerHTML;
-            let projectsArray = projectMenager.getProjectsArray();
-            let projectIndex = 0;
-            if (projectMenager.getProjectsArray().length === 0){
-                return
-            }else {
-                for(let i = 0; i < projectsArray.length; i++ ) {
-                    if (projectMenager.getProjectsArray()[i].getName() === projectName) {projectIndex = i; console.log(projectIndex)};
-                }
-                projectMenager.getProjectsArray()[projectIndex].getTodosArray().forEach((todo) => {
-                    domShowTodo(todo);
-                })
-            // showAllProjectTods()
-            }
-        })
-    })
 }
 export default addProjectDivEvent
