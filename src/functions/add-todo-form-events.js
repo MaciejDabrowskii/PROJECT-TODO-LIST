@@ -18,14 +18,19 @@ const newTodoButtonsEvents = () => {
         const todoCreateConfirmBtn = document.querySelector('.todoCreateConfirmBtn');
         todoCreateConfirmBtn.addEventListener('click', () => {
             const createTodo = newTodo();
-            const projectName = document.querySelector('.target').firstChild.innerHTML;
-            let projectsArray = projectMenager.getProjectsArray();
-            let projectIndex; 
-            for(let i = 0; i < projectsArray.length; i++ ) {
-                if (projectMenager.getProjectsArray()[i].getName() === projectName) projectIndex = i;
-            }
-            const project = projectMenager.getProjectsArray()[projectIndex];
-            project.addToTodosArray(createTodo); 
+            const projectName = document.querySelector('.target').firstChild.innerText;
+            if (projectName === "HOME") {
+                projectMenager.pushToHomeTodosArray(createTodo);
+            } else {
+                let projectsArray = projectMenager.getProjectsArray();
+                let projectIndex; 
+                for(let i = 0; i < projectsArray.length; i++ ) {
+                    if (projectMenager.getProjectsArray()[i].getName() === projectName) projectIndex = i;
+                }
+                const project = projectMenager.getProjectsArray()[projectIndex];
+                project.addToTodosArray(createTodo); 
+            };
+            
             createAddTODOtBtn();
             addTODOButtonEvent();
             // showProjects(); 

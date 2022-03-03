@@ -4,8 +4,8 @@ const projectMenager = (() => {
     
     const getProjectsArray = () => projectsArray;
     const getHomeTodosArray = () => homeTodosArray;
-    const pushToHomeTodosArray = (project) => {
-        homeTodosArray.push(project);
+    const pushToHomeTodosArray = (todo) => {
+        homeTodosArray.push(todo);
     };
     const pushToProjectsArray = (project) => {
         projectsArray.push(project);

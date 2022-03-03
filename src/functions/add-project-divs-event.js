@@ -9,9 +9,13 @@ const addProjectDivEvent = () => {
 
     const homeProject = document.querySelector('.homeProjectDiv');
     let projects = [...document.querySelectorAll('.projectDiv')];
+    const todosContainer = document.querySelector('.todosContainer');
+    
+    
     homeProject.addEventListener('click', () => {
         homeProject.classList.add('target');
-
+        todosContainer.innerHTML = "";
+        projects.forEach((project) => { project.classList.remove('target') });
         projectMenager.getHomeTodosArray().forEach((todo) => {
             domShowTodo(todo);
         })
@@ -19,21 +23,23 @@ const addProjectDivEvent = () => {
     
     
     projects.forEach((project) => {
-        
-        project.classList.remove('target')
+
+
         project.addEventListener('click', () =>{
+            todosContainer.innerHTML = "";
+            projects.forEach((project) => { project.classList.remove('target') });
             homeProject.classList.remove('target');
             project.classList.add('target');
             let projectName = project.firstChild.innerHTML;
             let projectsArray = projectMenager.getProjectsArray();
             let projectIndex;
+            
             for(let i = 0; i < projectsArray.length; i++ ) {
                 if (projectMenager.getProjectsArray()[i].getName() === projectName) projectIndex = i;
             }
             
             projectMenager.getProjectsArray()[projectIndex].getTodosArray().forEach((todo) => {
                 domShowTodo(todo);
-
             })
 
         })

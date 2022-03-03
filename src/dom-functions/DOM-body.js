@@ -6,7 +6,11 @@ const createBody = () => {
 
     const homeProjectDiv = document.createElement('div');
     homeProjectDiv.classList.add('homeProjectDiv', 'target');
-    homeProjectDiv.innerText = "HOME";
+   
+    const homeProjectDivTitle = document.createElement('div');
+    homeProjectDivTitle.classList.add('homeProjectDivTitle')
+    homeProjectDivTitle.innerText = "HOME";
+    homeProjectDiv.appendChild(homeProjectDivTitle);
 
     const projectsContainer = document.createElement('div');
     projectsContainer.classList.add('projectsContainer');
