@@ -69,7 +69,7 @@ body {
     height: 100%;
     background-color: rgb(216, 167, 139);
     display: grid;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 0.5fr 10fr 1fr;
 }
 .todoDivHeader {
     grid-row: 1 / 2;
@@ -80,6 +80,17 @@ body {
     padding-left: 2%;
     font-size: 3vh;
 }
+.todoDataHeaderDiv {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 4fr 1fr;
+    padding: 0.25% 0.5%;
+}
+.todoDataHeaderDiv > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .allTodosButton {
     background-color: rgb(218, 149, 149);
     align-self: center;
@@ -89,11 +100,16 @@ body {
     
 }
 .todosContainer {
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     background-color: rgb(176, 223, 182);
+    padding: 0.25% 0.5%;
+}
+.todoDiv {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 4fr 0.5fr 0.25fr 0.25fr;
 }
 .todoOptionsContainer {
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     background-color: rgb(18, 116, 31);
 }
 

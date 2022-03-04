@@ -44,7 +44,36 @@ const createBody = () => {
     allTodosButton.classList.add('allTodosButton');
     allTodosButton.innerText = "All Todos";
 
+    todoDivHeader.append(allTodosButton);
 
+    const todoDataHeaderDiv = document.createElement('div');
+    todoDataHeaderDiv.classList.add('todoDataHeaderDiv');
+
+    const todoNameDataHeader = document.createElement('div');
+    todoNameDataHeader.classList.add('todoNameDataHeader');
+    todoNameDataHeader.innerText = "NAME";
+
+    const todoDateDataHeader = document.createElement('div');
+    todoDateDataHeader.classList.add('todoDateDataHeader');
+    todoDateDataHeader.innerText = "DATE";
+
+    const todoTimeDataHeader = document.createElement('div');
+    todoTimeDataHeader.classList.add('todoTimeDataHeader');
+    todoTimeDataHeader.innerText = "TIME";
+
+    const todoPriorityDataHeader = document.createElement('div');
+    todoPriorityDataHeader.classList.add('todoPriorityDataHeader');
+    todoPriorityDataHeader.innerText = "PRIORITY";
+
+    const todoNoteDataHeader = document.createElement('div');
+    todoNoteDataHeader.classList.add('todoNoteDataHeader');
+    todoNoteDataHeader.innerText = "NOTE";
+
+    const todoFunctionsDataHeader = document.createElement('div');
+    todoFunctionsDataHeader.classList.add('todoFunctionsDataHeader');
+    todoFunctionsDataHeader.innerText = "FUNCTIONS";
+
+    todoDataHeaderDiv.append(todoNameDataHeader, todoDateDataHeader, todoTimeDataHeader, todoPriorityDataHeader, todoNoteDataHeader, todoFunctionsDataHeader);
 
     const todosContainer = document.createElement('div');
     todosContainer.classList.add('todosContainer');
@@ -52,9 +81,9 @@ const createBody = () => {
     const todoOptionsContainer = document.createElement('div');
     todoOptionsContainer.classList.add('todoOptionsContainer');
 
-    todoDivHeader.append(allTodosButton);
 
-    todosDiv.append(todoDivHeader, todosContainer, todoOptionsContainer);
+
+    todosDiv.append(todoDivHeader, todoDataHeaderDiv, todosContainer, todoOptionsContainer);
 
     body.append(projectsDiv, todosDiv);
 

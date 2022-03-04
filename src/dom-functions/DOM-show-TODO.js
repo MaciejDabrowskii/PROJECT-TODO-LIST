@@ -24,7 +24,20 @@ const domShowTodo = (todo) => {
     todoNotesDiv.classList.add('todoTimeDiv');
     todoNotesDiv.textContent = todo.getTodoNotes();
 
-    todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv);
+    const moveTodoButton = document.createElement('button');
+    moveTodoButton.classList.add('moveTodoButton');
+    moveTodoButton.textContent = "Move";
+
+    const editTodoButton = document.createElement('button');
+    editTodoButton.classList.add('editTodoButton');
+    editTodoButton.textContent = "E";
+
+    const deleteTodoButton = document.createElement('button');
+    deleteTodoButton.classList.add('deleteTodoButton');
+    deleteTodoButton.textContent = "X";
+
+
+    todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv, moveTodoButton, editTodoButton, deleteTodoButton);
     todosContainer.appendChild(todoDiv);
 };
 export default domShowTodo
