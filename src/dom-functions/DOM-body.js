@@ -1,3 +1,4 @@
+import showTodosFromHomeProject from "../functions/homeDiv-event.js"
 const createBody = () => {
     const body = document.querySelector('.body')
 
@@ -27,6 +28,8 @@ const createBody = () => {
     projectsDivHeader.innerText = "PROJECTS:";
 
     addProjectContainer.append(addProjectButton);
+
+    showTodosFromHomeProject(homeProjectDiv)
 
     projectsDiv.append(projectsDivHeader, homeProjectDiv, projectsContainer, addProjectContainer);
 
