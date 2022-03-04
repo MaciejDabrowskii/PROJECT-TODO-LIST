@@ -11,7 +11,7 @@ const projectButtonsEvents = () => {
                 });
             });
             window.onclick = function(event) {
-                if (event.target === !document.querySelector('.deleteProjectButton')) {    
+                if (!event.target.matches('.deleteProjectButton')) {    
                     if (
                         (!event.target.matches('.editProjectButton')) &&
                         (!event.target.matches('.dropdownContent')) &&

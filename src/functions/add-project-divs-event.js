@@ -12,7 +12,9 @@ const addProjectDivEvent = (project, index) => {
     homeProject.classList.add('target');
     const deleteProjectButton = document.querySelector('.deleteProjectButton');
     project.addEventListener('click', (event) =>{
-        if (event.target === !deleteProjectButton) {
+        
+        
+        if (!event.target.matches('.deleteProjectButton')) {
             let projectsArray = [...document.querySelectorAll('.projectDiv')];
             document.querySelector('.todosContainer').innerHTML = "";
             projectsArray.forEach((item) => {
