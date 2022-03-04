@@ -107,6 +107,12 @@ body {
 .todoDiv {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 4fr 0.5fr 0.25fr 0.25fr;
+    margin: 1% 0;
+}
+.todoDiv > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .todoOptionsContainer {
     grid-row: 4 / 5;
