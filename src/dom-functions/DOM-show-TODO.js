@@ -1,4 +1,6 @@
-const domShowTodo = (todo) => {
+import todoDivsEvents from "../functions/todoDivsEvents";
+
+const domShowTodo = (todo, index) => {
     const todosContainer = document.querySelector('.todosContainer');
 
     const todoDiv = document.createElement('div');
@@ -42,5 +44,6 @@ const domShowTodo = (todo) => {
 
     todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv, moveTodoButton, editTodoButton, deleteTodoButton);
     todosContainer.appendChild(todoDiv);
+    todoDivsEvents().todoDeleteButtonEvent(todoDiv, index)
 };
 export default domShowTodo

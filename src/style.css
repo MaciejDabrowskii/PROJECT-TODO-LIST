@@ -122,6 +122,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+.addTODOButton {
+    grid-column: 1 / 13;
+    grid-row: 1 / 3;
+    width: 30%;
+    height: 80%;
+    align-self: center;
+    justify-self: center;
+}
 .todoOptionsContainer > label {
     justify-self: center;
 }
