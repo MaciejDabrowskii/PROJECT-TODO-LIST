@@ -44,6 +44,6 @@ const domShowTodo = (todo, index) => {
 
     todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv, moveTodoButton, editTodoButton, deleteTodoButton);
     todosContainer.appendChild(todoDiv);
-    todoDivsEvents().todoDeleteButtonEvent(todoDiv, index)
+    todoDivsEvents().todoDeleteButtonEvent(deleteTodoButton, index)
 };
 export default domShowTodo
