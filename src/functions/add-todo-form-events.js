@@ -4,7 +4,7 @@ import todoTask from "./TODO-creator.js";
 import createAddTODOtBtn from "../dom-functions/DOM-addTodo-create-addBtn.js";
 import addTODOButtonEvent from "./add-todo-button-event.js";
 import newTodo from "./create-new-todo.js";
-
+import refreshTodosContainer from "../dom-functions/DOM-refresh-TODOS-container";
 const newTodoButtonsEvents = () => {
     const declineBtnFunction = (() => {
         const todoCreateCancelBtn = document.querySelector('.todoCreateCancelBtn');
@@ -33,7 +33,7 @@ const newTodoButtonsEvents = () => {
             
             createAddTODOtBtn();
             addTODOButtonEvent();
-            // showProjects(); 
+            refreshTodosContainer();
         })
     })();
 
