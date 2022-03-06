@@ -60,7 +60,12 @@ const swaptodoOptionsContainerContents = () => {
     todoCreateCancelBtn.classList.add("todoCreateCancelBtn");
     todoCreateCancelBtn.innerText= "X";
 
+    const todoCreateDivHeader = document.createElement('div');
+    todoCreateDivHeader.classList.add('todoCreateDivHeader');
+    todoCreateDivHeader.textContent = 'ADD NEW TODO';
+
     todoOptionsContainer.append(
+        todoCreateDivHeader,
         todoNameInputLabel, 
         todoNameInputText ,
         todoDatePickerLabel,

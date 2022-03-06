@@ -55,9 +55,7 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-/* .show {
-      display:block;
-} */
+
 
 .addProjectContainer {
     grid-row: 4 / 5;
@@ -115,8 +113,22 @@ body {
     align-items: center;
 }
 .todoOptionsContainer {
+    display: grid;
+    grid-template-columns: 0.75fr 2fr 0.75fr 1fr 0.5fr 0.75fr 0.75fr 0.75fr 0.75fr 3fr 0.25fr 0.25fr;
+    grid-template-rows: 1fr 1fr;
     grid-row: 4 / 5;
     background-color: rgb(18, 116, 31);
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.todoOptionsContainer > label {
+    justify-self: center;
+}
+.todoCreateDivHeader {
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    justify-self: center;
 }
 
 .footer {
