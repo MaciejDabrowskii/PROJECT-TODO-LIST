@@ -76,7 +76,7 @@ const editTodoContainerContents = (
     todoCreateCancelBtn.innerText= "X";
 
     const todoCreateDivHeader = document.createElement('div');
-    todoCreateDivHeader.classList.add('todoCreateDivHeader');
+    todoCreateDivHeader.classList.add('todoEditDivHeader');
     todoCreateDivHeader.textContent = 'EDIT TODO';
 
     todoOptionsContainer.append(

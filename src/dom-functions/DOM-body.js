@@ -1,4 +1,4 @@
-import showTodosFromHomeProject from "../functions/homeDiv-event.js"
+import showTodosFromHomeProject from "../functions/homeDiv-event.js";
 const createBody = () => {
     const body = document.querySelector('.body')
 
@@ -86,7 +86,6 @@ const createBody = () => {
     todosDiv.append(todoDivHeader, todoDataHeaderDiv, todosContainer, todoOptionsContainer);
 
     body.append(projectsDiv, todosDiv);
-
 };
 
 export default createBody

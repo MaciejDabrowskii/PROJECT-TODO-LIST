@@ -58,17 +58,25 @@ const todoDivsEvents = () => {
             });
             editButton.addEventListener('click', (e) => {
                 editTodoContainerContents(targetProjectIndex, passedTodoIndex, todoNameDivContent, todoDateDivContent, todoTimeDivContent, todoNotesDivContent);
-            })
+            });
         };    
+    };
+
+    const todoTargetEvent = (todoDiv) => {
             
-
-
-
+        todoDiv.addEventListener('click', (e) => {
+            const allTodos = [...document.getElementsByClassName('todoDiv')];
+            allTodos.forEach((todo) => {
+                todo.classList.remove('targetTodo');
+            });
+            todoDiv.classList.add('targetTodo');
+        });
     }
 
     return {
         todoDeleteButtonEvent,
-        todoEditButtonEvent
+        todoEditButtonEvent,
+        todoTargetEvent
     }
 };
 

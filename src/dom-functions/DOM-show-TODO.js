@@ -1,6 +1,7 @@
 import todoDivsEvents from "../functions/todoDivsEvents";
 
 const domShowTodo = (todo, index) => {
+    let todoIndex = index;
     const todosContainer = document.querySelector('.todosContainer');
 
     const todoDiv = document.createElement('div');
@@ -44,7 +45,8 @@ const domShowTodo = (todo, index) => {
 
     todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv, moveTodoButton, editTodoButton, deleteTodoButton);
     todosContainer.appendChild(todoDiv);
-    todoDivsEvents().todoDeleteButtonEvent(deleteTodoButton, index);
-    todoDivsEvents().todoEditButtonEvent(editTodoButton, index, todo.getTodoName(), todo.getTodoDate(), todo.gettodoTime(), todo.getTodoNotes());
+    todoDivsEvents().todoTargetEvent(todoDiv);
+    todoDivsEvents().todoDeleteButtonEvent(deleteTodoButton, todoIndex);
+    todoDivsEvents().todoEditButtonEvent(editTodoButton, todoIndex, todo.getTodoName(), todo.getTodoDate(), todo.gettodoTime(), todo.getTodoNotes());
 };
 export default domShowTodo
