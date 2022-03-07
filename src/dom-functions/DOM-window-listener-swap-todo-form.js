@@ -20,7 +20,6 @@ function swapEditOrAddTodoFormToButton(event) {
             (!event.target.matches('.addTODOButton'))
 
            ) { 
-                console.log('dziala')
                 createAddTODOtBtn();
                 addTODOButtonEvent();
              }; 
