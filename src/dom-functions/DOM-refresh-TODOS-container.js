@@ -1,13 +1,13 @@
 import projectMenager from "../functions/project-menager.js";
 import domShowTodo from "./DOM-show-TODO.js";
-import todoDivsEvents from "../functions/todoDivsEvents";
+
 const refreshTodosContainer = () => {
     document.querySelector('.todosContainer').innerHTML = "";
     let targetProjectName = document.querySelector('.target').firstChild.innerText;
     let targetProjectIndex = 0;
     if(targetProjectName === "HOME") {
         projectMenager.getHomeTodosArray().forEach((todo, index) => {
-            domShowTodo(todo);
+            domShowTodo(todo, index);
         })
     }else {
         
