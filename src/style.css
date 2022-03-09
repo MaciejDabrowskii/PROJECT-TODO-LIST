@@ -111,6 +111,15 @@ body {
     position: relative;
     display: inline-block;
 }
+.moveTodoDropdownHomeProject {
+    margin-bottom: 5%;
+}
+.moveTodoDropdownProjectDiv {
+    margin-bottom: 5%;
+}
+.moveTodoDropdownProjectDiv, .moveTodoDropdownHomeProject {
+    text-align: center;
+}
 .moveTodoDropdownProjectDiv:hover, .moveTodoDropdownHomeProject:hover {
     border: 2px solid red;
 }
@@ -118,9 +127,11 @@ body {
     display: block;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    /* min-width: 160px; */
+    right: 0;
     top: 100%;
-    padding: 8%;
+    padding: 20px;
+    margin-right: 50px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
