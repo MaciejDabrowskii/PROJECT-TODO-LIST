@@ -21,30 +21,12 @@ const addProjectDivEvent = () => {
         });
     };
 
-    function removeDropdown(event) {
-        
-        if (!!document.querySelector('.dropdownContent')){
-            if (
-                (!event.target.matches(`.editProjectButton`)) &&
-                (!event.target.matches('.dropdownContent')) &&
-                (!event.target.matches('#editProjectName')) &&
-                (!event.target.matches('label')) &&
-                (!event.target.matches('.confirmNewNameButton'))
-               ) {  
-                   const dropdownContent = document.querySelector('.dropdownContent');
-                   dropdownContent.remove();
-                   showProjects();
-                 };
-        };
-    };
+
 
     const editProjectButton = (editButton, index, dropdown) => {
         
         editButton.addEventListener('click', (e) =>{
             
-            window.addEventListener('click', (e) =>{
-                removeDropdown(e)
-            });
             if (!!document.querySelector('.dropdownContent')) {
                 const dropdownContent = document.querySelector('.dropdownContent');
                 dropdownContent.remove();

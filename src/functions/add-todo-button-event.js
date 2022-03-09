@@ -3,8 +3,5 @@ import swapEditOrAddTodoFormToButton from "../dom-functions/DOM-window-listener-
 const addTODOButtonEvent = () => {
     const addTODOButton = document.querySelector('.addTODOButton');
     addTODOButton.addEventListener('click', swaptodoOptionsContainerContents);
-    window.addEventListener('click', (e) => {
-        swapEditOrAddTodoFormToButton(e);
-    })
 };
 export default addTODOButtonEvent

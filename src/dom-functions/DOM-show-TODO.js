@@ -37,7 +37,7 @@ const domShowTodo = (todo, index) => {
     editTodoButton.textContent = "E";
 
     const moveTodoDropdown = document.createElement('div');
-    moveTodoDropdown.classList.add('editTodoDropdown');
+    moveTodoDropdown.classList.add('moveTodoDropdown');
 
     moveTodoDropdown.append(moveTodoButton);
 
@@ -53,5 +53,6 @@ const domShowTodo = (todo, index) => {
     todoDivsEvents().todoTargetEvent(todoDiv);
     todoDivsEvents().todoDeleteButtonEvent(deleteTodoButton, todoIndex);
     todoDivsEvents().todoEditButtonEvent(editTodoButton, todoIndex, todo.getTodoName(), todo.getTodoDate(), todo.gettodoTime(), todo.getTodoNotes());
+    todoDivsEvents().todoMoveButtonEvent(moveTodoButton, todoIndex, todoDiv);
 };
 export default domShowTodo
