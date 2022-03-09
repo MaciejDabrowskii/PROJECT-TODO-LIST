@@ -1,5 +1,5 @@
-import createAddTODOtBtn from "./DOM-addTodo-create-addBtn.js"
-import addTODOButtonEvent from "../functions/add-todo-button-event.js"
+import createAddTODOtBtn from "./DOM-addTodo-create-addBtn.js";
+import addTODOButtonEvent from "../functions/add-todo-button-event.js";
 function swapEditOrAddTodoFormToButton(event) {
         
     if ((!event.target.matches('.addTODOButton') && !event.target.matches('.editTodoButton')) && ((!!document.querySelector('.todoCreateDivHeader')) || (!!document.querySelector('.todoEditDivHeader')))){

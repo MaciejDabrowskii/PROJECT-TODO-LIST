@@ -1,6 +1,8 @@
 import projectMenager from "./project-menager.js";
 import refreshTodosContainer from "../dom-functions/DOM-refresh-TODOS-container"; 
 import editTodoContainerContents from '../dom-functions/DOM-editTodo-swap-to-Form';
+import createAddTODOtBtn from "../dom-functions/DOM-addTodo-create-addBtn.js";
+import addTODOButtonEvent from "./add-todo-button-event.js";
 const todoDivsEvents = () => {
 
 
@@ -9,6 +11,8 @@ const todoDivsEvents = () => {
         let targetProjectIndex = 0;
         if (targetProjectName === "HOME") {
             deleteButton.addEventListener('click', (e) =>{
+                createAddTODOtBtn();
+                addTODOButtonEvent();
                 projectMenager.removeHomeTODO(todoIndex);
                 refreshTodosContainer();
                 e.stopPropagation();    
@@ -21,6 +25,8 @@ const todoDivsEvents = () => {
                 };
             });
             deleteButton.addEventListener('click', (e) =>{
+                createAddTODOtBtn();
+                addTODOButtonEvent();
                 projectMenager.getProjectsArray()[targetProjectIndex].removeTODO(todoIndex);
                 refreshTodosContainer();
                 e.stopPropagation();

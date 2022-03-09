@@ -80,6 +80,6 @@ const swaptodoOptionsContainerContents = () => {
         todoCreateCancelBtn
     );
 
-    newTodoButtonsEvents()
+    newTodoButtonsEvents();
 };
 export default swaptodoOptionsContainerContents

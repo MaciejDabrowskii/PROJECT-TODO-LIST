@@ -36,6 +36,11 @@ const domShowTodo = (todo, index) => {
     editTodoButton.classList.add('editTodoButton');
     editTodoButton.textContent = "E";
 
+    const moveTodoDropdown = document.createElement('div');
+    moveTodoDropdown.classList.add('editTodoDropdown');
+
+    moveTodoDropdown.append(moveTodoButton);
+
     const deleteTodoButton = document.createElement('button');
     deleteTodoButton.classList.add('deleteTodoButton');
     deleteTodoButton.textContent = "X";
@@ -43,7 +48,7 @@ const domShowTodo = (todo, index) => {
     
 
 
-    todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv, moveTodoButton, editTodoButton, deleteTodoButton);
+    todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv, moveTodoDropdown, editTodoButton, deleteTodoButton);
     todosContainer.appendChild(todoDiv);
     todoDivsEvents().todoTargetEvent(todoDiv);
     todoDivsEvents().todoDeleteButtonEvent(deleteTodoButton, todoIndex);
