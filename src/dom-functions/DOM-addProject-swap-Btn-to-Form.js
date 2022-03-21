@@ -18,7 +18,11 @@ const swapContents = () => {
     projectNameCancelBtn.classList.add("projectNameCancelBtn");
     projectNameCancelBtn.innerText= "X";
 
-    addProjectContainer.append(projectNameInputLabel, projectNameInputText ,projectNameConfirmBtn, projectNameCancelBtn);
+    const validationMessageDiv = document.createElement('div');
+    validationMessageDiv.classList.add('validationMessageDiv');
+
+
+    addProjectContainer.append(projectNameInputLabel, projectNameInputText ,projectNameConfirmBtn, projectNameCancelBtn, validationMessageDiv);
 
     addEventFunctiontsToForm()
 };
