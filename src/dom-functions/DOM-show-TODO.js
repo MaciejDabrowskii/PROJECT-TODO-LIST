@@ -1,4 +1,5 @@
 import todoDivsEvents from "../functions/todoDivsEvents";
+import checkTodoOutdate from "../functions/check-todo-outdated";
 
 const domShowTodo = (todo, index) => {
     let todoIndex = index;
@@ -49,10 +50,13 @@ const domShowTodo = (todo, index) => {
 
 
     todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv, moveTodoDropdown, editTodoButton, deleteTodoButton);
+    checkTodoOutdate(todoDateDiv, todoDiv, todoTimeDiv);
     todosContainer.appendChild(todoDiv);
     todoDivsEvents().todoTargetEvent(todoDiv);
     todoDivsEvents().todoDeleteButtonEvent(deleteTodoButton, todoIndex);
     todoDivsEvents().todoEditButtonEvent(editTodoButton, todoIndex, todo.getTodoName(), todo.getTodoDate(), todo.gettodoTime(), todo.getTodoNotes());
     todoDivsEvents().todoMoveButtonEvent(moveTodoButton, todoIndex, todoDiv);
+    
+
 };
 export default domShowTodo

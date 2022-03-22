@@ -200,4 +200,7 @@ body {
 .gitIcon {
     height: 3vh;
 }
-
+.outdatedTodo{
+    text-decoration: line-through;
+    background-color: gray;
+}
