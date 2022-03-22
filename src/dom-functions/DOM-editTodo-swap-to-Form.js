@@ -79,6 +79,11 @@ const editTodoContainerContents = (
     todoCreateDivHeader.classList.add('todoEditDivHeader');
     todoCreateDivHeader.textContent = 'EDIT TODO';
 
+    const confirmAndDropdown = document.createElement('div');
+    confirmAndDropdown.classList.add('confirmAndDropdown');
+
+    confirmAndDropdown.append(todoEditConfirmBtn);
+
     todoOptionsContainer.append(
         todoCreateDivHeader,
         todoNameInputLabel, 
@@ -91,7 +96,7 @@ const editTodoContainerContents = (
         todoPrioritySelect,
         todoNotesInputLabel,
         todoNotesInput,
-        todoEditConfirmBtn,
+        confirmAndDropdown,
         todoCreateCancelBtn
     );
 

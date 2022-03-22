@@ -52,6 +52,10 @@ const swaptodoOptionsContainerContents = () => {
     todoNotesInput.type = "textarea";
     todoNotesInput.id = "todoNotesInput";
 
+    const confirmAndDropdown = document.createElement('div');
+    confirmAndDropdown.classList.add('confirmAndDropdown');
+
+
     const todoCreateConfirmBtn = document.createElement('button');
     todoCreateConfirmBtn.classList.add("todoCreateConfirmBtn");
     todoCreateConfirmBtn.innerText= "V";
@@ -63,6 +67,8 @@ const swaptodoOptionsContainerContents = () => {
     const todoCreateDivHeader = document.createElement('div');
     todoCreateDivHeader.classList.add('todoCreateDivHeader');
     todoCreateDivHeader.textContent = 'ADD NEW TODO';
+
+    confirmAndDropdown.append(todoCreateConfirmBtn);
 
     todoOptionsContainer.append(
         todoCreateDivHeader,
@@ -76,7 +82,7 @@ const swaptodoOptionsContainerContents = () => {
         todoPrioritySelect,
         todoNotesInputLabel,
         todoNotesInput,
-        todoCreateConfirmBtn,
+        confirmAndDropdown,
         todoCreateCancelBtn
     );
 

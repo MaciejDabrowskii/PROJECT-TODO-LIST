@@ -127,7 +127,6 @@ body {
     display: block;
     position: absolute;
     background-color: #f1f1f1;
-    /* min-width: 160px; */
     right: 0;
     top: 100%;
     padding: 20px;
@@ -160,6 +159,22 @@ body {
     height: 80%;
     align-self: center;
     justify-self: center;
+}
+.confirmAndDropdown {
+    position: relative;
+    display: inline-block;
+}
+.todoDataError {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: max-content;
+    right: 0.5vh;
+    bottom: 2.8vh;
+    background-color: yellow;
+    color: red;
+    padding: 3px;
+
 }
 .todoOptionsContainer > label {
     justify-self: center;
