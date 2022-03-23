@@ -2,6 +2,8 @@ import projectMenager from "./project-menager.js";
 
 const updateLocalStorage = () => {
     
+    localStorage.clear();
+
     let homeTodos = [];
     projectMenager.getHomeTodosArray().forEach((todo) => {
         let task = new Object();
@@ -36,6 +38,8 @@ const updateLocalStorage = () => {
             todosArray.push(task);          
         });        
         localStorage.setItem(`${projectName}`, JSON.stringify(todosArray));
-    })
+    });
+
+
 }
 export default updateLocalStorage
