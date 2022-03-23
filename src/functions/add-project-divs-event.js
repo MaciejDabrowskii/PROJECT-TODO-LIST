@@ -4,9 +4,10 @@ import todoTask from "./TODO-creator.js";
 import createAddTODOtBtn from "../dom-functions/DOM-addTodo-create-addBtn.js";
 import addTODOButtonEvent from "./add-todo-button-event.js";
 import domShowTodo from "../dom-functions/DOM-show-TODO.js";
-import refreshTodosContainer from "../dom-functions/DOM-refresh-TODOS-container"
-import showProjects from "../dom-functions/DOM-show-projects.js"
-import createEditProjectDropdownContents from "../dom-functions/DOM-create-edit-project-dropdown-contents.js"
+import refreshTodosContainer from "../dom-functions/DOM-refresh-TODOS-container";
+import showProjects from "../dom-functions/DOM-show-projects.js";
+import createEditProjectDropdownContents from "../dom-functions/DOM-create-edit-project-dropdown-contents.js";
+import updateLocalStorage from "./local-storage-menager.js";
 
 
 
@@ -18,6 +19,7 @@ const addProjectDivEvent = () => {
             projectMenager.removeProject(index);
             showProjects();
             e.stopPropagation();
+            updateLocalStorage();
         });
     };
 
@@ -51,6 +53,7 @@ const addProjectDivEvent = () => {
                     projectMenager.getProjectsArray()[index].editProjectName(editProjectNameInput.value);
                     showProjects();
                     e.stopPropagation();
+                    updateLocalStorage();
                     };
                 });
             } else {
@@ -90,6 +93,7 @@ const addProjectDivEvent = () => {
                     projectMenager.getProjectsArray()[index].editProjectName(editProjectNameInput.value);
                     showProjects();
                     e.stopPropagation();
+                    updateLocalStorage();
                     };
                 });
             }

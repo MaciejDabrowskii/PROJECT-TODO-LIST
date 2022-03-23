@@ -4,7 +4,7 @@ import editTodoContainerContents from '../dom-functions/DOM-editTodo-swap-to-For
 import createAddTODOtBtn from "../dom-functions/DOM-addTodo-create-addBtn.js";
 import addTODOButtonEvent from "./add-todo-button-event.js";
 import moveTodoDropdownContents from "../dom-functions/DOM-show-move-TODO-dropdown.js";
-
+import updateLocalStorage from "./local-storage-menager.js";
 const todoDivsEvents = () => {
 
     let targetProjectName = document.querySelector('.target').firstChild.innerText;
@@ -18,6 +18,7 @@ const todoDivsEvents = () => {
                 projectMenager.removeHomeTODO(todoIndex);
                 refreshTodosContainer();
                 e.stopPropagation();    
+                updateLocalStorage();
             });    
         
         } else {
@@ -32,6 +33,7 @@ const todoDivsEvents = () => {
                 projectMenager.getProjectsArray()[targetProjectIndex].removeTODO(todoIndex);
                 refreshTodosContainer();
                 e.stopPropagation();
+                updateLocalStorage();
             });
         };
     };
@@ -84,6 +86,7 @@ const todoDivsEvents = () => {
                     moveTodoProjects.remove();
                     moveTodoDropdownContents(targetProjectName, todoIndex);
                     e.stopPropagation();
+                    
                 }else {
                     const allTodos = [...document.getElementsByClassName('todoDiv')];
                     allTodos.forEach((todo) => {

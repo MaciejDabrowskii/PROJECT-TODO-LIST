@@ -29,7 +29,9 @@ const projectMenager = (() => {
         projectsArray[projectIndex].addToTodosArray(temp);
         projectsArray[projectIndex].flatTodosArray();
     };
-
+    const setProjectsArray = (data) => {
+        projectsArray = data;
+    };
     return {
         getProjectsArray,
         getAllTodosFromProjects,
@@ -39,6 +41,7 @@ const projectMenager = (() => {
         removeProject,
         removeHomeTODO,
         moveTODOFromHomeToProject,
+        setProjectsArray,
     }
 })();
 export default projectMenager

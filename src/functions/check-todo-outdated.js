@@ -13,7 +13,6 @@ const checkTodoOutdate = (date, todoDiv, time ) => {
         const timeNow = `${todayDate.getHours()}:${todayDate.getMinutes()}`;
         const today = format(new Date(), 'yyyy-MM-dd');
         const selectedDate = date.textContent;
-        console.log(timeNow);
         if (selectedDate <= today && time.textContent < timeNow) return true
     };
 

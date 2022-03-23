@@ -24,7 +24,6 @@ const addEventFunctiontsToForm = () => {
             const projectNamesArray = [];
             projectMenager.getProjectsArray().forEach((project) => {
                 projectNamesArray.push(project.getName());
-                console.log(projectNamesArray);
             });
             if (projectNamesArray.includes(projectNameInputText)) {
                 validationMessageDiv.innerText = "This name already exists!";
@@ -37,34 +36,9 @@ const addEventFunctiontsToForm = () => {
             projectMenager.pushToProjectsArray(project);      
             createAddProjectBtn();
             addProjectButtonEvent();
-            showProjects(); 
+            showProjects();
             }
         })
     })();
-
-    // const projectNameValidation = (() => {
-    //     const projectNameInputText = document.getElementById('projectNameInputText');
-    //     const validationMessageDiv = document.querySelector('validationMessageDiv');
-    //     const projectNamesArray = [];
-    //     projectMenager.getProjectsArray().forEach((project) => {
-    //         projectNamesArray.push(project.getName());
-    //         console.log(projectNamesArray);
-    //     });
-    //     projectNameInputText.addEventListener('keydown', () => {
-    //         projectNamesArray.forEach((name) => {
-    //             if(name === projectNameInputText.value) {
-    //                 validationMessageDiv.innerText = "This name already exists!";
-    //                 validationMessageDiv.classList.add('projectNameError');
-    //             }
-    //             else {
-    //                 validationMessageDiv.innerText = "This name already exists!";
-    //                 validationMessageDiv.classList.remov('projectNameError');
-    //                 validationMessageDiv.classList.add('projectNameOk');
-    //                 confirmBtn();
-    //             }
-    //         })
-    //     })
-    // })();
-
 };
 export default addEventFunctiontsToForm

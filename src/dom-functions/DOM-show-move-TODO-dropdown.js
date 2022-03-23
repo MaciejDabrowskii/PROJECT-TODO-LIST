@@ -1,5 +1,6 @@
 import projectMenager from "../functions/project-menager.js";
 import refreshTodosContainer from "./DOM-refresh-TODOS-container";
+import updateLocalStorage from "../functions/local-storage-menager.js";
 
 const moveTodoDropdownContents = (targetProjectName, todoIndex) => {
     
@@ -22,6 +23,7 @@ const moveTodoDropdownContents = (targetProjectName, todoIndex) => {
                 project.addToTodosArray(todoToMove[0]);              
                 e.stopPropagation();
                 refreshTodosContainer();
+                updateLocalStorage();
             })
             
             moveTodoProjectsDropdownContainer.append(moveTodoDropdownProjectDiv);
@@ -49,6 +51,7 @@ const moveTodoDropdownContents = (targetProjectName, todoIndex) => {
             projectMenager.pushToHomeTodosArray(todoToMove[0]);
             e.stopPropagation();
             refreshTodosContainer();
+            updateLocalStorage();
         });
         
         moveTodoProjectsDropdownContainer.append(moveTodoDropdownHomeProject);
@@ -67,6 +70,7 @@ const moveTodoDropdownContents = (targetProjectName, todoIndex) => {
                     project.addToTodosArray(todoToMove[0]);
                     e.stopPropagation();
                     refreshTodosContainer();
+                    updateLocalStorage();
 
                 })
                 moveTodoProjectsDropdownContainer.append(moveTodoDropdownProjectDiv);
