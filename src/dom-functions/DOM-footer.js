@@ -15,7 +15,11 @@ const createFooter = () => {
 
     gitLogoDiv.append(gitIcon);
 
-    footerDiv.append(nameDiv, gitLogoDiv)
+    footerDiv.append(nameDiv, gitLogoDiv);
+
+    document.querySelector('.gitIcon').addEventListener('click', () => {
+        window.open('https://github.com/MaciejDabrowskii', '_blank').focus();
+    });
 };
 
 export default createFooter
