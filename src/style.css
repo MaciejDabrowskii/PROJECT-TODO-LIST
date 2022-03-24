@@ -117,6 +117,9 @@ body {
     font-size: 2vh;
     color: var(--target-color);
 }
+.deleteTodoButton {
+    margin: 0 0.5vh;
+}
 .moveTodoButton {
     border-radius: 1vh;
     border: none;
@@ -212,7 +215,7 @@ body {
     align-items: center;
     color: var(--target-color);
     gap: 0.5vh;
-    font-size: 2.5vh;
+    font-size: 2vh;
 }
 
 .addProjectButton {
@@ -268,6 +271,7 @@ body {
     margin-left: 17vh;
     border-radius: 1vh;
     border: 0.4vh solid;
+    white-space: nowrap;
 }
 .todosDiv {
     grid-column: 2 / 3;
@@ -385,7 +389,7 @@ body {
 }
 .todoOptionsContainer {
     display: grid;
-    grid-template-columns: 0.75fr 2fr 0.5fr 1.2fr 0.5fr 0.75fr 0.75fr 0.75fr 0.5fr 3fr 0.25fr 0.25fr;
+    grid-template-columns: 0.8fr 2fr 0.5fr 1.2fr 0.5fr 0.75fr 0.75fr 0.75fr 0.5fr 3fr 0.25fr 0.25fr;
     grid-template-rows: 1fr 1.5fr;
     grid-row: 4 / 5;
     background-color: var(--low-priority-color);
