@@ -373,6 +373,16 @@ body {
     color: var(--target-color);
     caret-color: var(--high-priority-color);
 }
+.todoCreateConfirmBtn, .todoCreateCancelBtn, .todoEditConfirmBtn {
+    width: 3.5vh;
+    height: 3vh;
+    background-color: white;
+    border: 0.4vh solid var(--target-color);
+    border-radius: 1vh;
+    color: var(--target-color);
+    font-size: 1.6vh;
+    font-weight: bold;
+}
 .addTODOButton {
     grid-column: 1 / 13;
     grid-row: 1 / 3;
@@ -393,13 +403,14 @@ body {
     position: relative;
     display: inline-block;
 }
+
 .todoDataError {
     position: absolute;
     display: block;
     z-index: 1;
     width: max-content;
     right: 0.5vh;
-    bottom: 2.8vh;
+    bottom: 3.3vh;
     background-color: var(--medium-priority-color);
     color: var(--separator-red);
     margin-bottom: 0.3vh;
@@ -429,6 +440,8 @@ body {
     height: 4vh;
     justify-content: center;
     gap: 1%;
+    background-color: white;
+    margin-top: 0.5vh;
 }
 .gitIcon {
     height: 3vh;
@@ -437,3 +450,17 @@ body {
     text-decoration: line-through;
     background-color: gray;
 }
+.gitIcon {
+    transition: transform .4s ease-in-out;
+}
+.gitIcon:hover {
+    color: var(--separator-red);
+    transform: rotate(360deg) scale(1.2);
+}
+
+.todoCreateConfirmBtn, .todoCreateCancelBtn, .todoEditConfirmBtn,
+ .addProjectButton, .addTODOButton, .moveTodoButton, .editTodoButton,
+ .deleteTodoButton, .editProjectButton, .deleteProjectButton, .confirmNewNameButton, 
+ .projectNameConfirmBtn, .projectNameCancelBtn, .gitIcon {
+    cursor:pointer;
+ }

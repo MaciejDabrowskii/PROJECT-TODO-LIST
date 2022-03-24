@@ -58,11 +58,11 @@ const swaptodoOptionsContainerContents = () => {
 
     const todoCreateConfirmBtn = document.createElement('button');
     todoCreateConfirmBtn.classList.add("todoCreateConfirmBtn");
-    todoCreateConfirmBtn.innerText= "V";
+    todoCreateConfirmBtn.innerText= "✓";
 
     const todoCreateCancelBtn = document.createElement('button');
     todoCreateCancelBtn.classList.add("todoCreateCancelBtn");
-    todoCreateCancelBtn.innerText= "X";
+    todoCreateCancelBtn.innerText= "✕";
 
     const todoCreateDivHeader = document.createElement('div');
     todoCreateDivHeader.classList.add('todoCreateDivHeader');
