@@ -396,7 +396,7 @@ body {
     padding: 5px;
     justify-content: center;
     align-items: center;
-    border: 1vh solid var(--target-color);
+    border: 0.6vh solid var(--target-color);
     border-radius: 2vh;
     gap: 0.5vh;
 }
@@ -434,8 +434,8 @@ body {
     align-self: center;
     justify-self: center;
     width: 38vh;
-    height: 7vh;
-    border: 0.7vh solid var(--target-color);
+    height: 6vh;
+    border: 0.5vh solid var(--target-color);
     background-color: var(--medium-priority-color);
     border-radius: 2vh;
     font-family: 'elements';
