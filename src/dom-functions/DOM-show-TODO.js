@@ -46,9 +46,6 @@ const domShowTodo = (todo, index) => {
     deleteTodoButton.classList.add('deleteTodoButton');
     deleteTodoButton.textContent = "✕";
 
-    
-
-
     todoDiv.append(todoNameDiv, todoDateDiv, todoTimeDiv, todoPriorityDiv, todoNotesDiv, moveTodoDropdown, editTodoButton, deleteTodoButton);
     checkTodoOutdate(todoDateDiv, todoDiv, todoTimeDiv);
     todosContainer.appendChild(todoDiv);
@@ -59,4 +56,5 @@ const domShowTodo = (todo, index) => {
     
 
 };
+
 export default domShowTodo

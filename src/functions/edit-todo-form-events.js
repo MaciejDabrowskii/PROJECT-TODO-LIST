@@ -4,6 +4,7 @@ import addTODOButtonEvent from "./add-todo-button-event.js";
 import refreshTodosContainer from "../dom-functions/DOM-refresh-TODOS-container";
 import { format } from "date-fns/esm";
 import updateLocalStorage from "./local-storage-menager.js";
+
 const editTodoButtonsEvents = (targetProjectIndex, todoIndex,) => {
     const declineBtnFunction = (() => {
         const todoCreateCancelBtn = document.querySelector('.todoCreateCancelBtn');

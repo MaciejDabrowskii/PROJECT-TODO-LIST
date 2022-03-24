@@ -1,7 +1,8 @@
 import showTodosFromHomeProject from "../functions/homeDiv-event.js";
 import swapEditOrAddTodoFormToButton from "./DOM-window-listener-swap-todo-form.js";
 import removeDropdown from "./DOM-window-listener-remove-editProject-dropdown.js";
-import removeMoveTodoDropdown from "./DOM-window-listener-remove-moveTodo-dropdown.js"
+import removeMoveTodoDropdown from "./DOM-window-listener-remove-moveTodo-dropdown.js";
+
 const createBody = () => {
     const body = document.querySelector('.body')
 

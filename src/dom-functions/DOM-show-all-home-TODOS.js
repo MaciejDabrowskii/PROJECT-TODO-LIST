@@ -1,10 +1,5 @@
 import projectMenager from "./project-menager.js";
-import projectCreator from "./project-creator.js";
-import todoTask from "./TODO-creator.js";
-import createAddTODOtBtn from "../dom-functions/DOM-addTodo-create-addBtn.js";
-import addTODOButtonEvent from "./add-todo-button-event.js";
 import domShowTodo from "../dom-functions/DOM-show-TODO.js";
-import showAllProjectTods from "../dom-functions/DOM-show-all-project-TODOS"
 
 const addProjectDivEvent = () => {
 
@@ -19,7 +14,7 @@ const addProjectDivEvent = () => {
         projects.forEach((project) => { project.classList.remove('target') });
         projectMenager.getHomeTodosArray().forEach((todo) => {
             domShowTodo(todo);
-        })
+        });
     });       
     
     
@@ -37,9 +32,10 @@ const addProjectDivEvent = () => {
             }
             projectMenager.getProjectsArray()[projectIndex].getTodosArray().forEach((todo) => {
                 domShowTodo(todo);
-            })
+            });
 
-        })
-    })
-}
+        });
+    });
+};
+
 export default addProjectDivEvent

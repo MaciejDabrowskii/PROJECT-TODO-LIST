@@ -1,4 +1,5 @@
-import showProjects from "./DOM-show-projects.js"
+import showProjects from "./DOM-show-projects.js";
+
 function removeDropdown(event) {
         
     if (!!document.querySelector('.dropdownContent')){
@@ -15,4 +16,5 @@ function removeDropdown(event) {
              };
     };
 };
+
 export default removeDropdown

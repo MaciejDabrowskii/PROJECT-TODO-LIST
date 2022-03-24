@@ -102,4 +102,5 @@ const editTodoContainerContents = (
 
     editTodoButtonsEvents(targetProjectIndex, todoIndex);
 };
+
 export default editTodoContainerContents

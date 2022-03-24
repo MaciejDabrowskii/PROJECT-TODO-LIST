@@ -88,4 +88,5 @@ const swaptodoOptionsContainerContents = () => {
 
     newTodoButtonsEvents();
 };
+
 export default swaptodoOptionsContainerContents

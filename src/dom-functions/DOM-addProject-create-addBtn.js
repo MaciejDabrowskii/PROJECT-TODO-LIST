@@ -6,4 +6,5 @@ const createAddProjectBtn = () => {
         addProjectButton.innerText = "+ ADD";
         addProjectContainer.append(addProjectButton);
 };
+
 export default createAddProjectBtn

@@ -26,4 +26,5 @@ const swapContents = () => {
 
     addEventFunctiontsToForm()
 };
+
 export default swapContents

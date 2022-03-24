@@ -27,10 +27,10 @@ const addEventFunctiontsToForm = () => {
             });
             if (projectNamesArray.includes(projectNameInputText)) {
                 validationMessageDiv.innerText = "This name already exists!";
-                validationMessageDiv.classList.add('projectNameError');
+                validationMessageDiv.classList.add('visible');
             } else if(projectNameInputText.length === 0) {
                 validationMessageDiv.innerText = "Name must be at least 1 character long";
-                validationMessageDiv.classList.add('projectNameError');
+                validationMessageDiv.classList.add('visible');
             }
             else {
             projectMenager.pushToProjectsArray(project);      

@@ -12,4 +12,5 @@ function removeMoveTodoDropdown(event) {
              };
     };
 };
+
 export default removeMoveTodoDropdown

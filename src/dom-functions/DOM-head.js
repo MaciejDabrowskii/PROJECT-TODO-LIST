@@ -16,6 +16,6 @@ const createHead = () => {
 
     const head = document.querySelector('.head');
     head.append(logo, notificationDateDiv);
-
 };
+
 export default createHead

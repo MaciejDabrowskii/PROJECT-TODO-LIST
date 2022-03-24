@@ -6,4 +6,5 @@ const createAddTODOtBtn = () => {
         addTODOButton.innerText = "+ ADD new ToDo";
         todoOptionsContainer.append(addTODOButton);
 };
+
 export default createAddTODOtBtn

@@ -1,5 +1,5 @@
 import todoTask from "./TODO-creator.js";
-import projectMenager from "./project-menager.js";
+
 const newTodo = () => {
     const name = document.getElementById('todoNameInputText').value;
     const date = document.getElementById('todoDatePickerInput').value;

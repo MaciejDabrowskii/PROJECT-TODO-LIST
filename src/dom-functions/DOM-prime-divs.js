@@ -13,4 +13,5 @@ const headerBodyFooter = () => {
     mainDiv.append(head, body, footer);
 
 };
+
 export default headerBodyFooter
