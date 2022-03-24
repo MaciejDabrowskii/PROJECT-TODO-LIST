@@ -18,13 +18,13 @@ let showProjects = () => {
 
             const editProjectButton = document.createElement('button');
             editProjectButton.classList.add('editProjectButton');
-            editProjectButton.textContent = 'E';
+            editProjectButton.textContent = '✎';
             
             dropdown.append(editProjectButton);
 
             const deleteProjectButton = document.createElement('button');
             deleteProjectButton.classList.add('deleteProjectButton');
-            deleteProjectButton.textContent = 'X';
+            deleteProjectButton.textContent = '✕';
             deleteProjectButton.setAttribute('data-key', `${project.getName()}`)
 
             const projectButtonsContainer = document.createElement('div');

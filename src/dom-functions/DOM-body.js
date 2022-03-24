@@ -41,13 +41,8 @@ const createBody = () => {
 
     const todoDivHeader = document.createElement('div');
     todoDivHeader.classList.add('todoDivHeader');
-    todoDivHeader.innerText = "Todos:";
+    todoDivHeader.innerText = "YOUR PLANNED TASKS";
 
-    const allTodosButton = document.createElement('div');
-    allTodosButton.classList.add('allTodosButton');
-    allTodosButton.innerText = "All Todos";
-
-    todoDivHeader.append(allTodosButton);
 
     const todoDataHeaderDiv = document.createElement('div');
     todoDataHeaderDiv.classList.add('todoDataHeaderDiv');

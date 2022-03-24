@@ -13,10 +13,10 @@ const swapContents = () => {
 
     const projectNameConfirmBtn = document.createElement('button');
     projectNameConfirmBtn.classList.add("projectNameConfirmBtn");
-    projectNameConfirmBtn.innerText= "V";
+    projectNameConfirmBtn.innerText= "✓";
     const projectNameCancelBtn = document.createElement('button');
     projectNameCancelBtn.classList.add("projectNameCancelBtn");
-    projectNameCancelBtn.innerText= "X";
+    projectNameCancelBtn.innerText= "✕";
 
     const validationMessageDiv = document.createElement('div');
     validationMessageDiv.classList.add('validationMessageDiv');

@@ -14,7 +14,7 @@ const createEditProjectDropdownContents = () => {
 
     const confirmNewNameButton = document.createElement('button');
     confirmNewNameButton.classList.add('confirmNewNameButton');
-    confirmNewNameButton.textContent = 'OK';
+    confirmNewNameButton.textContent = '✓';
 
     dropdownContent.append(editProjectNameLabel, editProjectNameInput, confirmNewNameButton);
 

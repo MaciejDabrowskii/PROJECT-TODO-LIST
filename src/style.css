@@ -1,17 +1,53 @@
+
+@font-face {
+    font-family: 'elements';
+    src: url('../fonts/elements.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'text';
+    src: url('../fonts/text.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+:root {
+    /* colors */
+    --background-color: #bae6fd;
+    --target-color: #3b82f6;
+    --porojects-divs-background: #38bdf8;
+    --low-priority-color: #bbf7d0;
+    --medium-priority-color: #fef08a;
+    --high-priority-color: #fda4af;
+    --outdated-color: #e5e7eb;
+    --separator-red: #e11d48;
+    font-family: 'elements';
+}
 body {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 12fr 0.3fr;
+    background-color: var(--background-color);
 }
 .head {
     width: 100%;
-    height: 100%;
-    background-color: rgb(97, 161, 216);
+    height: 11vh;
+    background-color: var(--target-color);
+    font-family: 'elements';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
 }
 .logo {
     height: 100%;
     width: 40%;
-    font-size: 30px;
+    font-size: 5vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .body {
     width: 100%;
@@ -21,68 +57,219 @@ body {
 .projectsDiv {
     grid-column: 1 / 2;
     height: 100%;
-    background-color: rgb(207, 196, 182);
+    /* background-color: rgb(207, 196, 182); */
+    border-right: 1vh solid var(--separator-red);
+    padding-right: 2vh;
     display: grid;
     grid-template-rows: 1fr 1fr 10fr 1fr;
 }
 .projectsDivHeader {
     grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--target-color);
+    font-family: 'elements';
+    font-size: 3vh;
+    letter-spacing: 0.3vh;
 }
 .homeProjectDiv {
     grid-row: 2 / 3;
-    background-color: rgb(176, 223, 223);
+    background-color: var(--low-priority-color);
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    color: var(--target-color);
 }
 .projectsContainer {
     grid-row: 3 / 4;
-    background-color: rgb(209, 223, 176);
+    /* background-color: rgb(209, 223, 176); */
 }
 .target {
-    border: 5px solid red;
+    border: 0.6vh solid var(--target-color);
 }
 .projectDiv {
     display: flex;
     justify-content: space-between;
+    height: 3vh;
+    background-color: var(--porojects-divs-background);
+    font-family: 'elements';
+    font-size: 2.5vh;
+    letter-spacing: 0.1vh;
+    color: white;
+    padding: 1vh;
+    margin: 1vh 0 1vh 0;
+    border-radius: 1vh;
+}
+.editTodoButton, .deleteTodoButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5vh;
+    height: 3.5vh;
+    border-radius: 1vh;
+    border: none;
+    background-color: white;
+    font-size: 2vh;
+    color: var(--target-color);
+}
+.moveTodoButton {
+    border-radius: 1vh;
+    border: none;
+    background-color: white;
+    font-size: 2vh;
+    font-family: 'elements';
+    color: var(--target-color);
+}
+.projectButtonsContainer {
+    display: flex;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+}
+.editProjectButton {
+    width: 3vh;
+    height: 2.9vh;
+    background-color: white;
+    border: 1px; 
+    border-radius: 1vh;
+    font-size: 2vh;
+    color: var(--target-color);
+}
+.deleteProjectButton {
+    width: 3vh;
+    height: 3vh;
+    background-color: white;
+    border: 1px; 
+    border-radius: 1vh;
+    font-size: 2vh;
+    color: var(--target-color);
 }
 .dropdown {
     position: relative;
     display: inline-block;
+    bottom: 0.2vh;
+
 }
 .dropdownContent {
     display: block;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    width: 27vh;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
+    border-radius: 1vh;
+    padding: 1vh 1vh 1.5vh 1vh;
+    font-size: 1.9vh;
+    background-color: var(--target-color);
+    margin-top: 0.3vh;
+    text-align: center;
+}
+#editProjectName {
+    border: none;
+    border-radius: 0.5vh;
+    margin-top: 0.6vh;
+    font-family: 'elements';
+    transition: 0.1s;
+    margin-right: 0.4vh;
+}
+#editProjectName:focus {
+    outline: none;
+    border: 0.3vh solid var(--high-priority-color);
+    color: var(--target-color);
+    caret-color: var(--high-priority-color);
+}
+.confirmNewNameButton {
+    background-color: white;
+    border: 1px;
+    border-radius: 0.7vh;
+    font-size: 1.7vh;
+    color: var(--target-color);
+    font-weight: bold;
+}
 
 
 .addProjectContainer {
     grid-row: 4 / 5;
-    background-color: rgb(223, 176, 213);
+    background-color: var(--low-priority-color);
+    border: 0.6vh solid var(--target-color);
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--target-color);
+    gap: 0.5vh;
+    font-size: 2.5vh;
 }
 
+.addProjectButton {
+    width: 25vh;
+    height: 5vh;
+    border: 0.4vh solid var(--target-color);
+    background-color: var(--medium-priority-color);
+    border-radius: 2vh;
+    font-family: 'elements';
+    color: var(--target-color);
+    font-size: 3vh;
+}
+
+#projectNameInputText {
+    border: none;
+    border-radius: 1vh;
+    font-family: 'elements';
+    transition: 0.1s;
+    width: 23vh;
+    height: 3vh;
+    color: var(--target-color);
+    transition: 0.3s;
+}
+#projectNameInputText:focus {
+    font-size: 2vh;
+    outline: none;
+    border: 0.5vh solid var(--high-priority-color);
+    color: var(--target-color);
+    caret-color: var(--high-priority-color);
+}
+.projectNameConfirmBtn, .projectNameCancelBtn{
+    height: 3vh;
+    width: 3vh;
+    background-color: white;
+    border: 0.3vh solid var(--target-color);
+    border-radius: 1vh;
+    color: var(--target-color);
+    font-weight: bold;
+}
 .todosDiv {
     grid-column: 2 / 3;
     height: 100%;
-    background-color: rgb(216, 167, 139);
+    /* background-color: rgb(216, 167, 139); */
     display: grid;
     grid-template-rows: 1fr 0.5fr 10fr 1fr;
+    margin: 0 3vh 0 3vh;
+    color: var(--target-color);
+    border-radius: 1vh;
 }
 .todoDivHeader {
     grid-row: 1 / 2;
-    background-color: rgb(176, 223, 223);
+    /* background-color: rgb(176, 223, 223); */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding-left: 2%;
-    font-size: 3vh;
+    font-size: 3.5vh;
+    color: var(--target-color);
+    font-family: 'elements';
 }
 .todoDataHeaderDiv {
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 4fr 1fr;
     padding: 0.25% 0.5%;
+    font-size: 2.5vh;
+    color: var(--target-color);
+    font-family: 'elements';
+    border-bottom: 1vh solid var(--separator-red);
 }
 .todoDataHeaderDiv > div {
     display: flex;
@@ -90,22 +277,37 @@ body {
     align-items: center;
 }
 .allTodosButton {
-    background-color: rgb(218, 149, 149);
+    background-color: var(--low-priority-color);
     align-self: center;
     justify-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.3%;
     margin-right: 2%;
     
 }
 .todosContainer {
     grid-row: 3 / 4;
-    background-color: rgb(176, 223, 182);
-    padding: 0.25% 0.5%;
+    margin-top: 1.5vh;
+    /* background-color: var(--porojects-divs-background); */
 }
 .todoDiv {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 4fr 0.5fr 0.25fr 0.25fr;
     margin: 1% 0;
+    height: 5vh;
+    align-items: center;
+    border-radius: 1vh;
+}
+.High {
+    background-color: var(--high-priority-color);
+}
+.Medium {
+    background-color: var(--medium-priority-color);
+}
+.Low {
+    background-color: var(--low-priority-color);
 }
 .moveTodoProjects{
     position: relative;
@@ -140,17 +342,36 @@ body {
     align-items: center;
 }
 .targetTodo {
-    border: 3px solid red;
+    border: 0.6vh solid var(--target-color);
 }
 .todoOptionsContainer {
     display: grid;
-    grid-template-columns: 0.75fr 2fr 0.75fr 1fr 0.5fr 0.75fr 0.75fr 0.75fr 0.75fr 3fr 0.25fr 0.25fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.75fr 2fr 0.5fr 1.2fr 0.5fr 0.75fr 0.75fr 0.75fr 0.5fr 3fr 0.25fr 0.25fr;
+    grid-template-rows: 1fr 1.5fr;
     grid-row: 4 / 5;
-    background-color: rgb(18, 116, 31);
+    background-color: var(--low-priority-color);
     padding: 5px;
     justify-content: center;
     align-items: center;
+    border: 1vh solid var(--target-color);
+    border-radius: 2vh;
+    gap: 0.5vh;
+}
+.todoOptionsContainer > input[type=text], input[type=textarea], input[type=date], input[type=time], select {
+    border: none;
+    height: 3vh;
+    border-radius: 1vh;
+    font-family: 'elements';
+    color: var(--target-color);
+    background-color: white;
+    padding: 0 1vh;
+    transition: 0.3s;
+}
+.todoOptionsContainer > input[type=text]:focus, input[type=textarea]:focus, input[type=date]:focus, input[type=time]:focus {
+    outline: none;
+    border: 0.5vh solid var(--high-priority-color);
+    color: var(--target-color);
+    caret-color: var(--high-priority-color);
 }
 .addTODOButton {
     grid-column: 1 / 13;
@@ -159,6 +380,14 @@ body {
     height: 80%;
     align-self: center;
     justify-self: center;
+    width: 38vh;
+    height: 7vh;
+    border: 0.7vh solid var(--target-color);
+    background-color: var(--medium-priority-color);
+    border-radius: 2vh;
+    font-family: 'elements';
+    color: var(--target-color);
+    font-size: 3vh;
 }
 .confirmAndDropdown {
     position: relative;
@@ -171,9 +400,12 @@ body {
     width: max-content;
     right: 0.5vh;
     bottom: 2.8vh;
-    background-color: yellow;
-    color: red;
-    padding: 3px;
+    background-color: var(--medium-priority-color);
+    color: var(--separator-red);
+    margin-bottom: 0.3vh;
+    border: solid;
+    padding: 0.5vh 3vh;
+    border-radius: 1vh;
 
 }
 .todoOptionsContainer > label {
@@ -183,6 +415,7 @@ body {
     grid-column: 1 / 13;
     grid-row: 1 / 2;
     justify-self: center;
+    border-bottom: 0.5vh solid var(--separator-red);
 }
 .todoEditDivHeader {
     grid-column: 1 / 13;

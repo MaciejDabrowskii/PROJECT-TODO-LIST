@@ -17,6 +17,7 @@ function swapEditOrAddTodoFormToButton(event) {
             (!event.target.matches('.todoCreateCancelBtn')) &&
             (!event.target.matches('.todoEditDivHeader')) &&
             (!event.target.matches('.todoEditConfirmBtn')) &&
+            (!event.target.matches('.todoDataError')) &&
             (!event.target.matches('.addTODOButton'))
 
            ) { 

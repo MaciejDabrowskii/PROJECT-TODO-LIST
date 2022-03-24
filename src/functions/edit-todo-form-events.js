@@ -55,14 +55,14 @@ const editTodoButtonsEvents = (targetProjectIndex, todoIndex,) => {
                     name.classList.remove('invalid');
                     const todoDataError = document.createElement('div');
                     todoDataError.classList.add('todoDataError');
-                    todoDataError.innerText = "Date requred and must be in the future";
+                    todoDataError.innerText = "Date requred and must be set in the future";
                     confirmAndDropdown.append(todoDataError);
                 }
                 else {
                     name.classList.remove('invalid');
                     const todoDataError = document.createElement('div');
                     todoDataError.classList.add('todoDataError');
-                    todoDataError.innerText = "Date requred and must be in the future";
+                    todoDataError.innerText = "Date requred and must be set in the future";
                     confirmAndDropdown.append(todoDataError);
                 }
             }

@@ -35,7 +35,7 @@ const domShowTodo = (todo, index) => {
 
     const editTodoButton = document.createElement('button');
     editTodoButton.classList.add('editTodoButton');
-    editTodoButton.textContent = "E";
+    editTodoButton.textContent = "✎";
 
     const moveTodoDropdown = document.createElement('div');
     moveTodoDropdown.classList.add('moveTodoDropdown');
@@ -44,7 +44,7 @@ const domShowTodo = (todo, index) => {
 
     const deleteTodoButton = document.createElement('button');
     deleteTodoButton.classList.add('deleteTodoButton');
-    deleteTodoButton.textContent = "X";
+    deleteTodoButton.textContent = "✕";
 
     
 

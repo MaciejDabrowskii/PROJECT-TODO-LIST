@@ -3,7 +3,7 @@ import createAddProjectBtn from "../dom-functions/DOM-addProject-create-addBtn.j
 import projectMenager from "./project-menager.js";
 import projectCreator from "./project-creator.js";
 import showProjects from "../dom-functions/DOM-show-projects.js";
-import domShowTodo from "../dom-functions/DOM-show-TODO.js";
+import updateLocalStorage from "./local-storage-menager.js";
 
 const addEventFunctiontsToForm = () => {
     
@@ -37,6 +37,7 @@ const addEventFunctiontsToForm = () => {
             createAddProjectBtn();
             addProjectButtonEvent();
             showProjects();
+            updateLocalStorage()
             }
         })
     })();
